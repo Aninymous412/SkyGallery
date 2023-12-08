@@ -46,7 +46,7 @@ The project is organized as follows:
 | --------------------- | ----------- | --------------------------------------------- |
 | `index.html`          | /           | Main homepage of the website.                |
 | `modal.html`          | /           | HTML modal template used in image galleries.       |
-| `page4.html`          | /           | HTML page for the memory match game.          |
+| `memoryMatch.html`    | /           | HTML page for the memory match game.          |
 | `clouds.html`         | /           | HTML page for the basic cloud image gallery.  |
 | `nonbasicclouds.html` | /           | HTML page for the non-basic cloud gallery.    |
 | `styles.css`          | /styles     | CSS file for styling the website.             |
