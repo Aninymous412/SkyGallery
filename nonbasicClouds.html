@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="scripts/populateModal.js"></script>
+        <script src="scripts/modalContents.js"></script>
+        <script src="scripts/sections.js"></script>
+        <link href="styles/styles.css" rel="stylesheet">
+        <title>Non-Basic Clouds Gallery</title>
+    </head>
+    <body>
+        <script src="scripts/navbarGenerator.js"></script>
+        <main>
+            <section class="py-5 text-center container-fluid" id="nonbasicTopSection">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Non Basic Cloud Types</h1>
+                        <p>Click an image below to view it's gallery.</p>
+                    </div>
+                </div>
+            </section>
+            <!--End of upper section-->
+            <div class="album py-5">
+                <div class="container text-center" id="cloud-gallery">
+                    <script src="scripts/generateCloudHTML.js"></script>
+                    <script>
+                        generateSectionsHTML(nonBasicSections);
+                    </script>
+                </div>
+            </div>
+        </main>
+        <!--Modal Wrapper-->
+        <div class="modal-wrapper"></div>
+        <script>
+        $(function () {
+            $(".modal-wrapper").load("modal.html");
+        });
+        </script>
+    </body>
+    <footer class="container">
+        <p>Find this project and more on my <a href="https://github.com/Aninymous412"><img src="images/other/github-mark-white.png" alt="GitHub Logo">GitHub</a></p>
+    </footer>
+</html>

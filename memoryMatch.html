@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="scripts/modalContents.js"></script>
+        <link href="styles/styles.css" rel="stylesheet">
+        <title>Memory Match Game</title>
+    </head>
+    <body>
+      <script src="scripts/navbarGenerator.js"></script>
+      <main class="custom-bg">
+        <!--Upper Section-->
+        <section class="py-5 text-center container-fluid" id="MatchTopSection">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Memory Match Game</h1>
+                    <p>Flip a card to start playing now!</p>
+                </div>
+            </div>
+        </section>
+        <!--End of upper section-->
+        <div class="container match-game-space">
+            <div class="instructions py-5">
+              <h2 class="instruction-title fw-light">Instructions</h2>
+              <p id="instruction-text">
+                To play, click on a card to reveal its image. Click on another card to see if the images match. If they do, the cards will remain flipped.
+                If the images don't match, the cards will turn back over. Keep flipping pairs of cards until you have discovered all the matches.
+                If you get stuck, feel free to use the hints! Once you have matched all the cards, you win the game!
+              </p>
+            </div>
+            <div class="game">
+              <div class="game-settings-controls">
+                <div class="row">
+                  <div class="col-4">
+                    <button class="btn btn-custom mode-btn btn-sm" data-num-rows="4" data-hint-count="3" id="default">Easy</button>
+                    <button class="btn btn-custom mode-btn btn-sm" data-num-rows="5" data-hint-count="2">Medium</button>
+                    <button class="btn btn-custom mode-btn btn-sm" data-num-rows="6" data-hint-count="1">Hard</button>
+                  </div>
+                  <div class="col-4">
+                    <h6><span class="badge rounded-pill">Moves: <span class="moves"></span></span></h6>
+                    <h6><span class="badge rounded-pill">Timer: <span class="timer"></span></span></h6>
+                  </div>
+                  <div class="col-4">
+                    <button class="btn btn-custom reveal-btn btn-sm">Reveal</button>
+                    <button class="btn btn-custom hint-btn btn-sm"> Hints: <span id="hint-count">0</span></button>
+                    <button class="btn btn-custom reset-btn btn-sm">Reset</button>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="game-board">
+                <div id="grid">
+                  <!-- Cards will go here -->
+                  <script src="scripts/memoryMatchGame.js"></script>
+                </div>
+                <div id="victory-message" class="victory-message">
+                  <h1 class="victory-title">You win!</h1>
+                  <p class="victory-stats">Time: <span id="victory-time"></span><br>Moves: <span id="victory-moves"></span></p>
+                  <button id="play-again-button" class="btn btn-custom">Play Again</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="match-game-footer container">
+            <hr>
+            <p>Find this project and more on my <a href="https://github.com/Aninymous412"><img src="images/other/github-mark-white.png" alt="GitHub Logo">GitHub</a></p>
+          </div>
+      </main>
+    </body>
+</html>
