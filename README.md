@@ -16,7 +16,9 @@ Sky Gallery is a static website made using HTML, CSS, JavaScript, and Bootstrap.
 
 ## Demo Video
 
-To be included later.
+[![Video](https://img.youtube.com/vi/bDRfuCJli5w/maxresdefault.jpg)](https://www.youtube.com/watch?v=bDRfuCJli5w)
+
+Visit the website here: [Sky Gallery](https://aninymous412.github.io/SkyGallery/)
 
 ## Installation
 
